@@ -171,7 +171,6 @@ def test_taker(di,user):
                 d[question_counter]=ans
                 question_counter+=1
             result(di,d,sub,level,user)
-    
         elif(n==2):
             return
     
@@ -200,7 +199,6 @@ def Login(di):
 
 
 def registeration(di):
-    
     while True:
         user=input("user_id : ")
         passw=input("password: ")
@@ -222,15 +220,11 @@ if __name__=="__main__":
     content = fp.read()
     di = json.loads(content)
     fp.close()
-    
     inu=input("Login or register: ")
-    
     if(inu=="Login"):
-        
         Login(di)
         print("Logout!!!")
-        
-    elif(inu=="Res"):
+    elif(inu=="Register"):
         registeration(di)
         
         
