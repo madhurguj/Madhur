@@ -140,7 +140,6 @@ def result(di,d,sub,level,user):
     c=0
     print(user)
     for i in d:
-        #print(di["quiz"][sub][level]['q'+str(i)]["answer"],di["quiz"][sub][level]['q'+str(i)]["options"][d[i]])
         if(di["quiz"][sub][level]['q'+str(i)]["answer"]== di["quiz"][sub][level]['q'+str(i)]["options"][d[i]]):
             c+=1
         print("Q{0}) Your answer is {2}\n    Correct Answer is {1}".format(i,di["quiz"][sub][level]['q'+str(i)]["answer"],di["quiz"][sub][level]['q'+str(i)]["options"][d[i]]))
@@ -150,7 +149,6 @@ def result(di,d,sub,level,user):
     
 
 def test_taker(di,user):
-    
     while True:
         n=int(input("1. Take Quiz\n2. Logout\n choose: "))
         if(n==1):
@@ -178,13 +176,7 @@ def test_taker(di,user):
             return
     
     
-    
-    
-    
-    
-    
 def Login(di):
-    
     while True:    
         print("Please Login: ")
         user=input("user_id : ")
@@ -221,9 +213,9 @@ def registeration(di):
         fp = open('example.json','w+')
         fp.write(dump_data)
         fp.close()
-
         break
     return di
+
 
 if __name__=="__main__":
     fp = open('example.json','r')
